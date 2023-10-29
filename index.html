@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Form</title>
+    <link rel="stylesheet" type="text/css" href="VForm.css">
+    <link rel="icon" type="image/x-icon" href="Formfavicon.png">
+</head>
+<body>
+    <div class="container" id="maincontainer">
+        <div class="image" id="picture">
+        <img src="formFillingImage.webp" alt="image">
+        </div>
+    <div class="Form" id="validation">
+        <label>User Name</label>
+        <input type="text" id="username">
+        <p class="message" id="msg"></p>
+        <label>Email</label>
+        <input type="email" id="emailaddress">
+        <p class="message"></p>
+        <label>Password</label>
+        <input type="password" id="password">
+        <p class="message"></p>
+        <P id="rules">Follow the rules for password:
+       <br> 1.Start with Numbers followed by Lowercase and uppercase</P>
+        <div class="buttons">
+        <button id="submit">VALIDATE</button>
+        <button id="save" onclick="save()">SAVE</button>
+        <button id="clear" onclick="remove()">CLEAR</button>
+        </div>
+        <p id="sucess"></p>
+        <div id="adminuse">
+            <h1>Only for Admin use</h1>
+        <input type="password" id="Adminpassword" placeholder="Enter Admin password">
+        <button id="viewdata">ViewData</button>
+        <button id="clearadmindata" onclick="clearadmindata()">clear</button>
+        </div>
+    </div>
+</div>
+<table class="data">
+    <thead>
+        <tr>
+            <th>USERNAME</th>
+            <th>EMAIL</th>
+            <th>PASSWORD</th>
+        </tr>
+    </thead>
+    <tbody id="content">
+
+    </tbody>
+</table>
+</body>
+<script src="VForm.js"></script>
+</html>
